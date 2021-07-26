@@ -21,7 +21,7 @@ function LoginPage() {
     const onSubmit = async (values,onSubmitProps) => {
         const {email,password} = values
         try{
-            var result = await axios.post(`https://mern-auth-nodemailer.herokuapp.com/api/auth/login`,{email,password})
+            var result = await axios.post(`https://mern-authentication-server.herokuapp.com/api/auth/login`,{email,password})
             console.log(result);
             localStorage.setItem('auth-token',result.data.token)
             history.push('/Authorized')

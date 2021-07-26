@@ -11,7 +11,7 @@ function ProtectedPage() {
     useEffect(() => {
         const token = localStorage.getItem('auth-token')
         async function fetchData(){
-            const result = await axios.get(`https://mern-auth-nodemailer.herokuapp.com/api/private/Authorized`,
+            const result = await axios.get(`https://mern-authentication-server.herokuapp.com/api/private/Authorized`,
                 {
                     headers: {
                     "Content-Type": "application/json",

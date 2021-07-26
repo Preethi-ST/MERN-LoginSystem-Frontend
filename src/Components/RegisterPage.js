@@ -31,7 +31,7 @@ function RegisterPage() {
     const onSubmit = async (values) => {
         const {username,email,password} = values
         try{
-            const result = await axios.post(`https://mern-auth-nodemailer.herokuapp.com/api/auth/register`,{username,email,password})
+            const result = await axios.post(`https://mern-authentication-server.herokuapp.com/api/auth/register`,{username,email,password})
             history.push('/login')
         }catch(error){
             setMessage(error.response.result.message || error.response.result.error)
