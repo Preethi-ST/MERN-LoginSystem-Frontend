@@ -31,7 +31,7 @@ function ResetPasswordPage() {
         
         const {password} = values
         try{
-            const result = await axios.put(`https://mern-authentication-server.herokuapp.com/api/auth/resetpassword/${URLToken.resetToken}`,{password})
+            const result = await axios.put(`https://auth-mern-server.herokuapp.com/api/auth/resetpassword/${URLToken.resetToken}`,{password})
             setError(result.data.success)
             setMessage(result.data.data)
         }catch(error){

@@ -11,7 +11,7 @@ body{
 .App{
     height: 100vh;
 	width: 100%;
-    background-image:linear-gradient(to bottom right, red , blue); 
+    background-image:linear-gradient(to bottom right, rgb(255, 52, 52) , rgb(62, 62, 250)); 
     display: flex;
     justify-content: center;
     align-items: center;

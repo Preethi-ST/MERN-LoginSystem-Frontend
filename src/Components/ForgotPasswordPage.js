@@ -20,7 +20,7 @@ function ForgotPasswordPage() {
     const onSubmit = async (values,onSubmitProps) => {
         const {email} = values
         try{
-            var result = await axios.post(`https://mern-auth-nodemailer.herokuapp.com/api/auth/forgotpassword`,{email})
+            var result = await axios.post(`https://auth-mern-server.herokuapp.com/api/auth/forgotpassword`,{email})
             setError(result.data.success)
             setMessage(result.data.data)
         }catch(error){
